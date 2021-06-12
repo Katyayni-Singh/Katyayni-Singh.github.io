@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>INTERVIEW PORTAL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Museo, Source Sans Pro;
+        }
+        /* Style the header */
+        
+        p {
+            margin: 5px;
+            font: helvetica;
+        }
+        
+        .header {
+            background-color: #222222;
+            padding: 5px;
+            text-align: center;
+            color: #CEDB56;
+        }
+        /* Create three unequal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            padding: 10px;
+            height: 500px;
+            /* Should be removed. Only for demonstration */
+        }
+        /* Left and right column */
+        
+        .column.left {
+            width: 20%;
+            padding-left: 10px;
+        }
+        /* Middle column */
+        
+        .column.middle {
+            width: 70%;
+            color: #D35D47;
+            text-align: center;
+            font: Museo;
+            font-size: 30px;
+            padding: 50px;
+            padding-top: 100px;
+        }
+        /* Clear floats after the columns */
+        
+        .column.right {
+            width: 10%;
+            padding-left: 10px;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        /* Style the footer */
+        
+        .footer {
+            background-color: #222222;
+            padding: 10px;
+            text-align: center;
+            color: #FFFFFF;
+            font: "Microsoft JhengHei ";
+            font-size: 20px;
+        }
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        
+        @media (max-width: 600px) {
+            .column.side,
+            .column.middle {
+                width: 100%;
+            }
+        }
+    </style>
+    <script src="js/webcam.js" async>
+    </script>
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="EPAM_LOGO-RGB_Primary.jpg" width="70" height="30">
+    </div>
+
+    <div class="header">
+
+        <h2>INTERVIEW PORTAL</h2>
+        <p style="text-align: right ; padding-left: 10px;">Contact us</p>
+
+    </div>
+
+    <div class="row">
+        <div class="column left" style="background-color:#CEDB56;">Start the Interview</div>
+        <div class="column middle" style="background-color:#FFFFFF;">​JOIN OUR TEAM TODAY!</br>
+            Work with the best minds in the business. </br>
+            FIND YOUR DREAM JOB</div>
+        <div class="column right" style="background-color:#76CDD8;">Column</div>
+    </div>
+    <video id="player" controls autoplay></video>
+    <button id="capture">Capture</button>
+    <canvas id="canvas" width=320 height=240></canvas>
+    <div class="footer">
+        <p>
+            HELLO. HOW CAN WE HELP YOU?</p>
+        <p>Get in touch with us. We'd love to hear from you.</p>
+
+        <p>EPAM.com</p>
+        </p>
+    </div>
+
+</body>
+
+</html>
